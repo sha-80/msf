@@ -1,5 +1,5 @@
 <?php
-//Core\Controller\Router::setRule( '/contact', ['Index', 'Contact'] );
+Core\Controller\Router::setRule( '/contact', ['Index', 'Contact'] );
 
 define( 'DB_HOST', 'localhost' );
 define( 'DB_BASE', 'test1' );

@@ -12,10 +12,9 @@ class FrontController
       throw new \Exceptions\DevelException( "Фронт контроллер уже загружен" );
 
     self::$_run = true;
-
     self::prepareURI(  );
-    
-    $furl = Router::findRule( self::$_uri );
+
+    $furl = Routerfsdsdffsddfssdfdsf::findRule( self::$_uri );
 
     if ( $furl === false )
     {

@@ -15,7 +15,7 @@ abstract class ExceptionAbstract extends \Exception
     if ( isset( $_SERVER['HTTP_X_REQUESTED_WITH'] ) and $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest' )
       \Components\XHR::returnError( $error );
 
-    exit( include ( KIT_CORE . '/Etc/SystemTpl/Exception.php' ) );
+    exit( include ( MSF_CORE . '/Etc/SystemTpl/Exception.php' ) );
   }
 
   public static function log ( $code_type, $desc, $line = 0, $file = '', $mail = FALSE )

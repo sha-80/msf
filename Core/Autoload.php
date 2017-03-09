@@ -139,7 +139,7 @@ class Autoload
   protected static function validateNameSpace ( $ns_name, $dir )
   {
     if ( ! preg_match( '/^([\\a-z_]+)$/i', $ns_name ) )
-      return '_SYS_CORRECT_NAMESPACE_NAME__' . $ns_name;
+      return 'Название неймспейса не поддерживается__' . $ns_name;
 
     foreach ( self::getFileExts() as $ext )
     {
@@ -148,7 +148,7 @@ class Autoload
         return true;
     }
 
-    return "_SYS_CORRECT_NAMESPACE_PATH__(dir:<b>{$dir}</b>; ns:<b>{$ns_name}</b>)";
+    return "Путь к неймспейсу не корректен__(dir:<b>{$dir}</b>; ns:<b>{$ns_name}</b>)";
   }
 
   protected static function prepareNs( $namespaces, $namespace )
@@ -213,10 +213,7 @@ class Autoload
       require_once $file;
     else
     {
-      echo '<pre>';
-      print_r( debug_backtrace(  ) );
-      echo '</pre>';
-      throw new \Exceptions\DevelException( "_AUTOLOAD_FILE_NF__autoload({$class})" );
+      throw new \Exceptions\DevelException( "Класс не найден__autoload({$class})" );
     }
   }
 

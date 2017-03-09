@@ -98,7 +98,7 @@ class View
 
   public function e404(  )
   {
-    header( "HTTP/1.1 404 Not Found" );
+//    header( "HTTP/1.1 404 Not Found" );
     include MSF_APP . "/Views/Pages/404.php";
     exit;
   }
