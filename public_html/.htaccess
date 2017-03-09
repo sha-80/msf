@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L,QSA]
+
+#RewriteRule ^product/([\d]+)$	product.php?id=$1
+#php_value auto_prepend_file "/dir/path/utilities.php"
+
+#RemoveHandler .phtml .php .php3 .php4 .php5 .php6 .php7 .phps .cgi .exe .pl .asp .aspx .shtml .shtm .fcgi .fpl .jsp .htm .html .wml
+#AddType application/x-httpd-php-source .phtml .php .php3 .php4 .php5 .php6 .php7 .phps .cgi .exe .pl .asp .aspx .shtml .shtm .fcgi .fpl .jsp .htm .html .wml
