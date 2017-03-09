@@ -22,5 +22,8 @@ Autoload::setNamespaces( [
 
 spl_autoload_register( ['\Autoload', 'loadClass' ] );
 
+set_exception_handler( ['Exceptions\CoreException', 'coreExceptionHandler'] );
+set_error_handler( ['Exceptions\CoreException', 'coreErrorHandler'], E_ALL );
+
 require_once MSF_APP . "/Config/Base.php";
 //Components\Session::run();

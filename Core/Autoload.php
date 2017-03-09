@@ -212,9 +212,7 @@ class Autoload
     if ( $file = self::findFile( $class ) )
       require_once $file;
     else
-    {
       throw new \Exceptions\DevelException( "Класс не найден__autoload({$class})" );
-    }
   }
 
   public static function resetNamespace ( $namespace, $path )
