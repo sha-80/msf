@@ -8,7 +8,11 @@
     <p align="center">
       <?= $error ?>
       <?php
-      if ( strpos( $_SERVER['HTTP_USER_AGENT'], 'DeAle' ) !== false )
+      $ua = isset( $_SERVER['HTTP_USER_AGENT'] ) and is_string( $_SERVER['HTTP_USER_AGENT'] )
+        ? $_SERVER['HTTP_USER_AGENT']
+        : '';
+
+      if ( $ua == DEVEL_UA )
       {
         echo '<pre>';
         print_r( debug_backtrace(  ) );
