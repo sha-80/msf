@@ -3,7 +3,7 @@ namespace Core\Controller;
 
 class FrontController
 {
-  protected static $_run = false;
+  private static $_run = false;
   protected static $_uri;
 
   public static function run()
@@ -14,7 +14,7 @@ class FrontController
     self::$_run = true;
     self::prepareURI(  );
 
-    $furl = Routerfsdsdffsddfssdfdsf::findRule( self::$_uri );
+    $furl = Router::findRule( self::$_uri );
 
     if ( $furl === false )
     {
