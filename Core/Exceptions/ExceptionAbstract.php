@@ -22,5 +22,4 @@ abstract class ExceptionAbstract extends \Exception
   {
     return true;
   }
-
 }

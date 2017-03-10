@@ -3,9 +3,9 @@ namespace Core\Controller;
 
 abstract class PageController
 {
-  public function setVar( $name, $data )
+  public function setVar( $name, $data, $xss = true )
   {
-    $view = \Core\View\View::getInstance(  );
-    $view -> setData( $name, $data );
+    $view2 = \Core\View\View::getInstance(  );
+    $view2 -> setData( $name, $data, $xss );
   }
 }

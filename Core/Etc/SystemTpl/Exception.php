@@ -8,11 +8,11 @@
     <p align="center">
       <?= $error ?>
       <?php
-      $ua = isset( $_SERVER['HTTP_USER_AGENT'] ) and is_string( $_SERVER['HTTP_USER_AGENT'] )
+      $ua = ( isset( $_SERVER['HTTP_USER_AGENT'] ) and is_string( $_SERVER['HTTP_USER_AGENT'] ) )
         ? $_SERVER['HTTP_USER_AGENT']
         : '';
 
-      if ( $ua == DEVEL_UA )
+      if ( $ua === DEVEL_UA or MSF_DEBUG === true )
       {
         echo '<pre>';
         print_r( debug_backtrace(  ) );

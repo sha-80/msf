@@ -1,9 +1,6 @@
 <?php
 chdir( '../' );
 
-/**
- * dflfsdkjfsdkjfsdkjfsdhkj
- */
 define( 'MSF_ROOT', getcwd(  ) );
 define( 'MSF_HEADTIME', microtime( true ) );
 define( 'MSF_HEAD_MEMORY_USG', memory_get_usage(  ) );
